@@ -1,20 +1,25 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-
-export default function App() {
+import React from "react";
+import { Text, StyleSheet, View } from "react-native";
+import CustomComponent from "./src/screens/CustomComponents";
+const App = () => {
+  const myVar = "Asad";
+  const myElement = <Text>Hellow please read my blogs! at Medium</Text>;
+  const getFullName = (firstName, secondName) => {
+    return `My Name is ${firstName} ${secondName}`;
+  };
   return (
-    <View style={styles.container}>
-      <Text>Hellow World!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <CustomComponent />
+      <Text style={styles.textStyle}>Hellow {myVar} from App.js</Text>
+      {myElement}
+      <Text>HI, {getFullName("Syed", "Asad")}</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+  textStyle: {
+    color: "orange",
   },
 });
+export default App;
