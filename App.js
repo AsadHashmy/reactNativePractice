@@ -1,11 +1,11 @@
 import React from "react";
 import { Text, StyleSheet, View } from "react-native";
-import OurButton from "./src/screens/OurButton";
+import ImageFile from "./src/screens/ImageFile";
 
 const App = () => {
   return (
     <View>
-      <OurButton />
+      <ImageFile />
     </View>
   );
 };
